@@ -8,6 +8,8 @@ RUN npm install --production
 
 COPY . .
 
+RUN rm -f .env
+
 EXPOSE 5000
 
 CMD ["node", "index.js"]
