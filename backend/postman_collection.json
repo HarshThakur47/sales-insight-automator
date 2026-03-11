@@ -1,0 +1,54 @@
+{
+  "info": {
+    "name": "Sales Insight Automator",
+    "description": "API collection for testing Sales Insight Automator",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Analyze Sales File",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "src": "",
+              "description": "Upload your CSV or XLSX file here"
+            },
+            {
+              "key": "email",
+              "value": "test@example.com",
+              "type": "text",
+              "description": "Email where summary will be sent"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/analyze",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "analyze"]
+        }
+      }
+    }
+  ]
+}
