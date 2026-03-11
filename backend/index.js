@@ -14,6 +14,7 @@ app.use(helmet());
 app.use(cors({
   origin: process.env.FRONTEND_URL,
   methods: ['GET', 'POST'],
+  credentials: true,
 }));
 app.use(limiter);
 app.use(express.json());
